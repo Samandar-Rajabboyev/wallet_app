@@ -1,0 +1,51 @@
+POST http://localhost:3000/api/v1/signup
+Content-Type: application/json
+
+{
+    "username": "Abdulaziz",
+    "password": "Kit",
+    "fullName": "Abdulaziz"   
+}
+
+####
+
+POST http://localhost:3000/api/v1/signin
+Content-Type: application/json
+
+{
+    "username": "Abdulaziz",
+    "password": "Kit"
+}
+
+
+####
+
+GET http://localhost:3000/api/v1/users
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFiZHVsYXppeiIsImlhdCI6MTY2NTA3MjcyN30.OVdd009uaNolgmF5CwjPYsP3BAblDCVTZ840bWLJ7DA
+
+####
+
+GET http://localhost:3000/api/v1/user
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFiZHVsYXppeiIsImlhdCI6MTY2NTA3MjcyN30.OVdd009uaNolgmF5CwjPYsP3BAblDCVTZ840bWLJ7DA
+
+####
+
+GET http://localhost:3000/api/v1/wallets
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFiZHVsYXppeiIsImlhdCI6MTY2NTA3MjcyN30.OVdd009uaNolgmF5CwjPYsP3BAblDCVTZ840bWLJ7DA
+
+####
+
+POST http://localhost:3000/api/v1/wallets
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFiZHVsYXppeiIsImlhdCI6MTY2NTA3MjcyN30.OVdd009uaNolgmF5CwjPYsP3BAblDCVTZ840bWLJ7DA
+
+{
+    "name": "Clothes"
+}
+
+####
+
+DELETE http://localhost:3000/api/v1/wallets/14
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFiZHVsYXppeiIsImlhdCI6MTY2NTA3MjcyN30.OVdd009uaNolgmF5CwjPYsP3BAblDCVTZ840bWLJ7DA
