@@ -1,9 +1,16 @@
 # Wallet_app
 ------
 ## Database tables
-  - User
-  - Wallet
-  - Transaction
+ 
+|     User      |    Wallet     |  Transactions |
+| ------------- | ------------- | ------------- |
+| id            | id            | id            |
+| username      | name          | type          |
+| password      | balance       | amount        |
+| full_name     | created_at    | description   |
+| balance       | updated_at    | created_at    |
+|               |               | updated_at    |
+
 ## Api paths
   - [X] /api/v1/signup/ -> ***POST***
   - [X] /api/v1/signin/ -> ***POST***
