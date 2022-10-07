@@ -6,9 +6,9 @@
 | ------------- | ------------- | ------------- |
 | id            | id            | id            |
 | username      | name          | type          |
-| password      | balance       | amount        |
-| full_name     | created_at    | description   |
-| balance       | updated_at    | created_at    |
+| password      | created_at    | amount        |
+| full_name     | updated_at    | description   |
+|               |               | created_at    |
 |               |               | updated_at    |
 
 ## Api paths
@@ -16,10 +16,11 @@
   - [X] /api/v1/signin/ -> ***POST***
   - [X] /api/v1/users/ -> ***GET***
   - [X] /api/v1/user/ -> ***GET***
+  - [X] /api/v1/user/sum?walletId={walletId}&type={income || outcome} -> ***GET***
   - [X] /api/v1/wallets/ -> ***GET*** : ***POST***
-  - [ ] /api/v1/transactions/ -> ***POST***
-  - [ ] /api/v1/transactions/?id= -> ***GET*** : ***PUT*** : ***DELETE***
-  - [ ] /api/v1/transactions/?type={income || outcome}&categoryId={categoryId} ***GET***
+  - [X] /api/v1/transactions/ -> ***POST***
+  - [X] /api/v1/transactions/?id= -> ***GET*** : ***PUT*** : ***DELETE***
+  - [X] /api/v1/transactions/?type={income || outcome}&categoryId={categoryId} ***GET***
 ## Used packages
   ```javascript
   "dependencies": {
