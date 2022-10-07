@@ -4,7 +4,6 @@ import { UnauthorizedException } from "../exceptions/unauthorized_exception";
 
 export async function checkTokenAndGetUser(authorization: any): Promise<User> {
   const userService = new UserService();
-
   const token = authorization;
   if (!token) throw new UnauthorizedException();
 

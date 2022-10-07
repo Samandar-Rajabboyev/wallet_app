@@ -1,6 +1,5 @@
 import { AppDataSource } from "../data-source";
 import { NextFunction, Request, Response } from "express";
-import { Wallet } from "../entity/wallet";
 import { WalletService } from "../services/wallet_service";
 import { checkTokenAndGetUser } from "../utils/helper/check_token_and_get_user";
 import { exceptionHandler } from "../utils/helper/exception_handler";

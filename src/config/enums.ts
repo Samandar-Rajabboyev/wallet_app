@@ -7,5 +7,5 @@ export enum Methods {
 
 export enum TransactionType {
   income = "income",
-  outcome = "outcome",
+  expanse = "expanse",
 }

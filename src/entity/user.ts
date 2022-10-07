@@ -16,9 +16,6 @@ export class User {
   @Column({ name: "full_name" })
   fullName: string;
 
-  @Column("decimal", { default: 0, zerofill: true })
-  balance: number;
-
   @OneToMany(() => Wallet, (wallet) => wallet.user)
   wallets: Wallet[];
 

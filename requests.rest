@@ -25,6 +25,11 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFiZHVsYXpp
 
 ####
 
+GET http://localhost:3000/api/v1/user/sum
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFiZHVsYXppeiIsImlhdCI6MTY2NTA3MjcyN30.OVdd009uaNolgmF5CwjPYsP3BAblDCVTZ840bWLJ7DA
+
+####
+
 GET http://localhost:3000/api/v1/user
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFiZHVsYXppeiIsImlhdCI6MTY2NTA3MjcyN30.OVdd009uaNolgmF5CwjPYsP3BAblDCVTZ840bWLJ7DA
 
@@ -47,5 +52,42 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFiZHVsYXpp
 ####
 
 DELETE http://localhost:3000/api/v1/wallets/14
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFiZHVsYXppeiIsImlhdCI6MTY2NTA3MjcyN30.OVdd009uaNolgmF5CwjPYsP3BAblDCVTZ840bWLJ7DA
+
+####
+
+GET http://localhost:3000/api/v1/transactions
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFiZHVsYXppeiIsImlhdCI6MTY2NTA3MjcyN30.OVdd009uaNolgmF5CwjPYsP3BAblDCVTZ840bWLJ7DA
+
+####
+
+POST http://localhost:3000/api/v1/transactions/
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFiZHVsYXppeiIsImlhdCI6MTY2NTA3MjcyN30.OVdd009uaNolgmF5CwjPYsP3BAblDCVTZ840bWLJ7DA
+
+{ 
+    "walletId": 16,
+    "amount": 750,
+    "type": "expanse",
+    "description": "Calvin Klein"
+}
+
+####
+
+PUT http://localhost:3000/api/v1/transactions/9
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFiZHVsYXppeiIsImlhdCI6MTY2NTA3MjcyN30.OVdd009uaNolgmF5CwjPYsP3BAblDCVTZ840bWLJ7DA
+
+{ 
+    "walletId": 16,
+    "amount": 800,
+    "type": "expanse",
+    "description": "Calvin Klein"
+}
+
+####
+
+DELETE http://localhost:3000/api/v1/transactions/12
 Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFiZHVsYXppeiIsImlhdCI6MTY2NTA3MjcyN30.OVdd009uaNolgmF5CwjPYsP3BAblDCVTZ840bWLJ7DA

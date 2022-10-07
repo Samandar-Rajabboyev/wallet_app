@@ -18,9 +18,6 @@ export class Wallet {
   @Column()
   name: string;
 
-  @Column("decimal", { default: 0, zerofill: true })
-  balance: number;
-
   @CreateDateColumn()
   createdAt: string;
 

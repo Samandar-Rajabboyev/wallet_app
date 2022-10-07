@@ -11,6 +11,10 @@ import {
   WalletController,
   WalletControllerActions,
 } from "./controller/wallet_controller";
+import {
+  TransactionController,
+  TransactionControllerActions,
+} from "./controller/transaction_controller";
 
 export const Routes = [
   {
@@ -24,6 +28,13 @@ export const Routes = [
     route: "/api/v1/user",
     controller: UserController,
     action: UserControllerActions.one,
+  },
+  {
+    method: Methods.GET,
+    route: "/api/v1/user/sum",
+    controller: UserController,
+    action: UserControllerActions.sum,
+    // query -> ?walletId=:walletId&type=:type
   },
   {
     method: Methods.POST,
@@ -57,28 +68,29 @@ export const Routes = [
   },
   {
     method: Methods.GET,
-    route: "/api/v1/transactions/?tpye=:type&categoryId=:categoryId",
-    // controller: TransactionController,
-    // action: TransactionControllerActions.all,
+    route: "/api/v1/transactions",
+    controller: TransactionController,
+    action: TransactionControllerActions.all,
+    // query -> ?type=:type&walletId=:walletId
   },
   {
     method: Methods.POST,
     route: "/api/v1/transactions",
-    // controller: TransactionController,
-    // action: TransactionControllerActions.save,
-    // body { walletId: required, price: required, type, description }
+    controller: TransactionController,
+    action: TransactionControllerActions.save,
+    // body -> { walletId: required, amount: required, type, description }
   },
   {
     method: Methods.PUT,
     route: "/api/v1/transactions/:id",
-    // controller: TransactionController,
-    // action: TransactionControllerActions.update,
+    controller: TransactionController,
+    action: TransactionControllerActions.update,
+    // body -> { walletId, amount, type, description }
   },
   {
     method: Methods.DELETE,
     route: "/api/v1/transactions/:id",
-    // controller: TransactionController,
-    // action: TransactionControllerActions.delete,
-    // body { price, type, description }
+    controller: TransactionController,
+    action: TransactionControllerActions.remove,
   },
 ];

@@ -21,8 +21,8 @@ export class Transaction {
   @Column("decimal")
   amount: number;
 
-  @Column()
-  describtion: string;
+  @Column({ default: "", zerofill: true })
+  description: string;
 
   @CreateDateColumn()
   createdAt: string;
@@ -30,8 +30,14 @@ export class Transaction {
   @UpdateDateColumn()
   updatedAt: string;
 
+  @Column({ select: false })
+  userId: number;
+
   @ManyToOne(() => User, (user) => user.transactions, { onDelete: "CASCADE" })
   user: User;
+
+  @Column({ select: false })
+  walletId: number;
 
   @ManyToOne(() => Wallet, (wallet) => wallet.transactions, {
     onDelete: "CASCADE",
