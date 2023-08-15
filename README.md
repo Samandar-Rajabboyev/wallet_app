@@ -22,7 +22,7 @@
   - [X] /api/v1/transactions/?id= -> ***GET*** : ***PUT*** : ***DELETE***
   - [X] /api/v1/transactions/?type={income || outcome}&categoryId={categoryId} ***GET***
 ## Used packages
-  ```javascript
+  ```json
   "dependencies": {
     "@types/bcrypt": "^5.0.0",
     "@types/jsonwebtoken": "^8.5.9",
